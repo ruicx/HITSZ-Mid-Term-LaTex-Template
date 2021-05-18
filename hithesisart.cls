@@ -277,6 +277,8 @@
 \hit@def@term{cclassid}
 \hit@def@term{caffil}
 \hit@def@term{csupervisor}
+\hit@def@term{cassosupervisor}
+\hit@def@term{ccosupervisor}
 \hit@def@term{cdate}
 
 \hit@def@fontsize{dachu}{58bp}
@@ -348,6 +350,12 @@
          \textbf{\hit@graduate@caffiltitle} & \underline{\makebox[6.1cm]{\textbf{\hit@caffil}}}\\
          \textbf{\hit@graduate@cmajortitle} & \underline{\makebox[6.1cm]{\textbf{\hit@csubject}}}\\
          \textbf{\hit@graduate@supervisor} & \underline{\makebox[6.1cm]{\textbf{\hit@csupervisor}}}\\
+         \ifx\hit@cassosupervisor\@empty\else%
+           \textbf{\hit@graduate@cassosupervisor} & \underline{\makebox[6.1cm]{\textbf{\hit@cassosupervisor}}}\\
+         \fi
+         \ifx\hit@ccosupervisor\@empty\else%
+           \textbf{\hit@graduate@ccosupervisor} & \underline{\makebox[6.1cm]{\textbf{\hit@ccosupervisor}}}\\
+         \fi
          \textbf{\hit@graduate@studenttitle} & \underline{\makebox[6.1cm]{\textbf{\hit@cauthor}}}\\
          \textbf{\hit@graduate@studentid} & \underline{\makebox[6.1cm]{\textbf{\hit@cstudentid}}}\\
          \textbf{\hit@graduate@datetitle} & \underline{\makebox[6.1cm]{\textbf{\hit@cdate}}}\\
