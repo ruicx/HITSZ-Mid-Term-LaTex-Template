@@ -433,11 +433,13 @@
 \def\maketoc{
   \renewcommand{\cftdotsep}{1}
   \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
-  \renewcommand{\cftbeforesecskip}{3mm}
-  \renewcommand{\cftbeforesubsecskip}{3mm}
+  \renewcommand{\cftbeforesecskip}{2mm}
+  \renewcommand{\cftbeforesubsecskip}{2mm}
+  \renewcommand{\cftbeforesubsubsecskip}{2mm}
   \renewcommand{\contentsname}{\hfill\heiti\xiaoer[1.57481] 目\hspace{\ccwd}录 \hfill}
   \renewcommand{\cftaftertoctitle}{\hfill}
   \renewcommand{\cftaftertoctitleskip}{28.34646bp}
+  \renewcommand{\cftsubsubsecindent}{2.3em}
   \tocloftpagestyle{empty}
   \tableofcontents
 }
