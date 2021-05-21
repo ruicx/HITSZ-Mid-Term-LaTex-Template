@@ -217,6 +217,9 @@
 \RequirePackage{subfigure}%支持子图 %centerlast 设置最后一行是否居中
 \RequirePackage[subfigure]{ccaption} %支持双语标题
 \RequirePackage{xltxtra}
+\RequirePackage{color}
+\RequirePackage{mathtools}
+\RequirePackage[indentafter]{titlesec}
 
 
 \renewcommand\normalsize{%
@@ -427,6 +430,10 @@
   \noindent\parbox[t][6.5cm][t]{\textwidth}{\hit@bachelor@teachercomment}
   \noindent\parbox[b][6cm][t]{\textwidth}{\hit@bachelor@teachersign\underline{\makebox[3cm]{}}\hfill\hit@bachelor@checkdate\underline{\makebox[3cm]{}}}
 }
+
+% paragraph style
+\setcounter{secnumdepth}{4}
+\titleformat{\paragraph}[hang]{\heiti\normalsize}{\arabic{paragraph})}{1em}{}[]
 
 % ====================================
 
