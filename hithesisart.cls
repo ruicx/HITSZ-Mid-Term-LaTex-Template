@@ -431,10 +431,6 @@
   \noindent\parbox[b][6cm][t]{\textwidth}{\hit@bachelor@teachersign\underline{\makebox[3cm]{}}\hfill\hit@bachelor@checkdate\underline{\makebox[3cm]{}}}
 }
 
-% paragraph style
-\setcounter{secnumdepth}{4}
-\titleformat{\paragraph}[hang]{\heiti\normalsize}{\arabic{paragraph})}{1em}{}[]
-
 % ====================================
 
 \def\maketoc{
@@ -495,6 +491,10 @@
   }
   \fancyfoot[C]{\xiaowu-~\thepage~-}
 }
+
+% paragraph style
+\setcounter{secnumdepth}{4}
+\titleformat{\paragraph}[hang]{\heiti\normalsize}{\arabic{paragraph})}{2pt}{}[]
 
 % ====================================
 
