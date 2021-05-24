@@ -211,7 +211,7 @@
 \RequirePackage{varwidth}
 \RequirePackage{changepage}
 \RequirePackage{multicol}
-\RequirePackage[below]{placeins}%允许上一个section的浮动图形出现在下一个section的开始部分,还提供\FloatBarrier命令,使所有未处理的浮动图形立即被处理
+\RequirePackage{placeins}%允许上一个section的浮动图形出现在下一个section的开始部分,还提供\FloatBarrier命令,使所有未处理的浮动图形立即被处理
 \RequirePackage{flafter}       % 使得所有浮动体不能被放置在其浮动环境之前，以免浮动体在引述它的文本之前出现.
 \RequirePackage{multirow}       %使用Multirow宏包，使得表格可以合并多个row格
 \RequirePackage{subfigure}%支持子图 %centerlast 设置最后一行是否居中
@@ -219,6 +219,7 @@
 \RequirePackage{xltxtra}
 \RequirePackage{color}
 \RequirePackage{mathtools}
+\RequirePackage{bbm} % for \mathbbm{1}
 \RequirePackage[indentafter]{titlesec}
 
 
@@ -256,8 +257,8 @@
   },
   subsubsection={
     afterindent=true,
-    beforeskip={3bp},
-    afterskip={3bp},
+    beforeskip={6bp},
+    afterskip={6bp},
     format={\heiti\normalsize},
     aftername=\enspace,
     fixskip=true,
@@ -495,6 +496,29 @@
 % paragraph style
 \setcounter{secnumdepth}{4}
 \titleformat{\paragraph}[hang]{\heiti\normalsize}{\arabic{paragraph})}{2pt}{}[]
+
+% publication list: [P1]
+\newlist{publicationList}{enumerate}{1}
+\setlist[publicationList]{resume, label={[P\arabic*]},
+    topsep=0pt, parsep=0pt, partopsep=0pt, itemsep=0pt}
+
+% semi quote list: 1)
+\newlist{semiQuotList}{enumerate}{1}
+\setlist[semiQuotList]{label={\arabic*)},
+    topsep=0pt, parsep=0pt, partopsep=0pt, itemsep=0pt}
+
+% unorder list with \textbullet
+\newlist{closeItemize}{itemize}{1}
+\setlist[closeItemize]{label={\textbullet},
+    topsep=0pt, parsep=0pt, partopsep=0pt, itemsep=0pt}
+
+% close description
+\newlist{closeDescription}{description}{1}
+\setlist[closeDescription]{topsep=0pt, parsep=0pt, partopsep=0pt, itemsep=0pt}
+
+% equation numbering in style likes (2-1)
+\numberwithin{equation}{section}
+\renewcommand{\theequation}{\thesection-\arabic{equation}}
 
 % ====================================
 

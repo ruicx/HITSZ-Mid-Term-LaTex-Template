@@ -10,7 +10,29 @@
 \paragraph{四级标题}
 \lipsum[2]
 \paragraph{四级标题}
+
+\begin{equation}
+    H_{\epsilon}(z)=\frac{1}{2}\left[1+\frac{2}{\pi} \arctan \left(\frac{z}{\epsilon}\right)\right] .
+\end{equation}
+
 \lipsum[3]
+
+\begin{table}[htbp]
+    \caption{页面宽度表格。}
+    \newcolumntype{Y}{>{\centering\arraybackslash}X}
+    % 仍然可以使用 p{3em} 指定某列宽度, 并保持整个表格宽度，从而适应不等宽列
+    \begin{tabularx}{\textwidth}{*{5}{Y}}
+        \toprule
+             & Dice   & JS     & BF     & PN     \\
+        \midrule
+        Mean & 0.9999 & 0.9999 & 0.9999 & 0.9999 \\
+        Max  & 0.9999 & 0.9999 & 0.9999 & 0.9999 \\
+        Min  & 0.9999 & 0.9999 & 0.9999 & 0.9999 \\
+        Std. & 0.9999 & 0.9999 & 0.9999 & 0.9999 \\
+        \bottomrule
+    \end{tabularx}
+    \label{tab: quantitatively evaluation results}
+\end{table}
 
 \subsection{二级标题}
 \subsubsection{三级标题}
