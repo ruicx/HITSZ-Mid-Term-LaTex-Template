@@ -29,6 +29,7 @@
 %   7. 将公式编号修改为了 (2-1) 的形式
 %   8. 在参考文献卡你添加了 \FloatBarrier
 %   9. 添加了等宽表格例子
+%   10. 修改了图头和表头的格式
 % TexStudio 使用
 %   1. 将编译器改成 latexmk
 %   2. 将输出文件夹改为 build
@@ -36,7 +37,7 @@
 % ----------------------------- Warning -----------------------------
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[fontset=windows,toc=true,type=master,stage=midterm,campus=shenzhen]{hithesisart}
+\documentclass[fontset=windows,toc=true,type=master,stage=midterm,campus=shenzhen,printWithe=false]{hithesisart}
 % 此处选项中不要有空格
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 必填选项
@@ -49,6 +50,8 @@
 %   含义：校区选项，默认harbin
 % fontset=windows|mac|ubuntu|fandol
 %   含义：前三个对应各自系统，fandol是开源字体。
+% printWithe=true|false
+%   含义：true 则封面和目录后面有空白页，以便双面打印，默认 false
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 

@@ -68,6 +68,7 @@
 \DeclareBoolOption[false]{debug}
 \DeclareBoolOption[true]{toc}
 \DeclareBoolOption[true]{newtxmath}
+\DeclareBoolOption[false]{printWithe}
 
 \DeclareStringOption{fontset}
 
@@ -221,6 +222,7 @@
 \RequirePackage{mathtools}
 \RequirePackage{bbm} % for \mathbbm{1}
 \RequirePackage[indentafter]{titlesec}
+\RequirePackage{caption}
 
 
 \renewcommand\normalsize{%
@@ -456,9 +458,17 @@
     \hit@report@titlepage@graduate
     \fi
     \clearpage
+    \ifhit@printWithe
+      \thispagestyle{empty}
+      \null\clearpage
+    \fi
     \ifhit@toc
     \maketoc
     \clearpage
+    \ifhit@printWithe
+      \thispagestyle{empty}
+      \null\clearpage
+    \fi
     \fi
   \end{titlepage}
 }
@@ -516,9 +526,19 @@
 \newlist{closeDescription}{description}{1}
 \setlist[closeDescription]{topsep=0pt, parsep=0pt, partopsep=0pt, itemsep=0pt}
 
-% equation numbering in style likes (2-1)
+% equation numbering in style likes "(2-1)"
 \numberwithin{equation}{section}
 \renewcommand{\theequation}{\thesection-\arabic{equation}}
+
+% figure numbering in style likes "图 2-1 "
+\numberwithin{figure}{section}
+\renewcommand{\thefigure}{\thesection-\arabic{figure}}
+\captionsetup[figure]{labelsep=space}
+
+% table numbering in style likes "表 2-1 "
+\numberwithin{table}{section}
+\renewcommand{\thetable}{\thesection-\arabic{table}}
+\captionsetup[table]{labelsep=space}
 
 % ====================================
 
