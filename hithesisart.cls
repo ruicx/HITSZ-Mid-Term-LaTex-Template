@@ -505,7 +505,7 @@
 
 % paragraph style
 \setcounter{secnumdepth}{4}
-\titleformat{\paragraph}[hang]{\heiti\normalsize}{\arabic{paragraph})}{2pt}{}[]
+\titleformat{\paragraph}[hang]{\heiti\normalsize}{\arabic{paragraph}) }{2pt}{}[]
 
 % publication list: [P1]
 \newlist{publicationList}{enumerate}{1}
