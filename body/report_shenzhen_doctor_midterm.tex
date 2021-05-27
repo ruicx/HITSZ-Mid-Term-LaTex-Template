@@ -1,24 +1,45 @@
-% section 后有*表示不需要画横线
-\section{论文工作是否按开题报告预定的内容及进度安排进行}*
+% * =========================================================================
+% * 课题主要研究内容及进度
+% * =========================================================================
+\section{课题主要研究内容及进度}
+
+% * -------------------------------------------------------------------------
+% * 课题主要研究内容
+% * -------------------------------------------------------------------------
+\subsection{课题主要研究内容}
 
 \lipsum[1]
 
-\section{目前已完成的研究工作及结果}
+% * -------------------------------------------------------------------------
+% * 进度介绍
+% * -------------------------------------------------------------------------
+\subsection{进度介绍}
+
+\lipsum[2]
+
+% * =========================================================================
+% * 目前已完成的主要研究工作及结果
+% * =========================================================================
+\section{目前已完成的主要研究工作及结果}
 
 \subsection{二级标题}
+
 \subsubsection{三级标题}
-\paragraph{四级标题}
-\lipsum[2]
+
 \paragraph{四级标题}
 
-\begin{equation}
+\lipsum[2]
+
+\paragraph{公式与图表}
+
+式\eqref{eq: example} 是一个公式示例。表 \ref{tab: table example} 是一个表格实例。图 \ref{fig: figure example} 是一个插图示例。
+
+\begin{equation} \label{eq: example}
     H_{\epsilon}(z)=\frac{1}{2}\left[1+\frac{2}{\pi} \arctan \left(\frac{z}{\epsilon}\right)\right] .
 \end{equation}
 
-\lipsum[3]
-
 \begin{table}[htbp]
-    \caption{页面宽度表格。}
+    \caption{页面宽度表格}
     \newcolumntype{Y}{>{\centering\arraybackslash}X}
     % 仍然可以使用 p{3em} 指定某列宽度, 并保持整个表格宽度，从而适应不等宽列
     \begin{tabularx}{\textwidth}{*{5}{Y}}
@@ -31,8 +52,19 @@
         Std. & 0.9999 & 0.9999 & 0.9999 & 0.9999 \\
         \bottomrule
     \end{tabularx}
-    \label{tab: quantitatively evaluation results}
+    \label{tab: table example}
 \end{table}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\textwidth]{快逃.jpg}
+    \caption{示例图片}
+    \label{fig: figure example}
+\end{figure}
+
+\paragraph{参考文献}
+当文献做主语时，需要将文献放在行内，使用 \verb|\inlinecite{cnproceed}|，如：文献 \inlinecite{cnproceed} 中描述了 XXXX。
+其他情况下使用 \verb|\cite{cnproceed}| 如：XXXX\cite{cnproceed}。
 
 \subsection{二级标题}
 \subsubsection{三级标题}
@@ -41,48 +73,63 @@
 \paragraph{四级标题}
 \lipsum[3]
 
+% * =========================================================================
+% * 后期拟完成的研究工作及进度安排
+% * =========================================================================
 \section{后期拟完成的研究工作及进度安排}
 
-\subsection{subsection title}
-\subsubsection{subsection title}
-\lipsum[2-3]
-\subsection{subsection title}
-\subsubsection{subsection title}
-\lipsum[4-5]
+本课题的所定目标已经完成了大部分，后期需要完成的工作包括 XXXXXX，具体工作为：
+\begin{semiQuotList}
+    \item 工作 1。
+    \item 工作 2。
+    \item 工作 3。
+\end{semiQuotList}
 
+具体工作进度安排为：
+\begin{closeItemize}
+    \item 202X 年 X 月 -- 202X 年 X 月：XXXXX。
+    \item 202X 年 X 月 -- 202X 年 X 月：将牙齿方向判断合并到牙齿检测模型中，并尝试使用 Anchor Free 检测方法。
+    \item 202X 年 X 月 -- 202X 年 X 月：尝试将活动轮廓处理流程合并到深度学习模型内部。
+    \item 202X 年 X 月 -- 202X 年 X 月：整理结果，撰写毕业论文，准备毕业答辩。
+\end{closeItemize}
+
+% * =========================================================================
+% * 存在的困难与问题
+% * =========================================================================
 \section{存在的困难与问题}
+本课题涉及 XXXXXX。此外，XXXXXXX，给课题的实现带来了一定的困难。总体上，预期可能遇到的困难有：
+\begin{semiQuotList}
+    \item 问题 1。
+    \item 问题 2。
+    \item 问题 3。
+    \item 问题 4。
+    \item 问题 5。
+\end{semiQuotList}
 
-\subsection{subsection title}
-\lipsum[2-3]
-\subsection{subsection title}
+% * -------------------------------------------------------------------------
+% * 存在问题与困难
+% * -------------------------------------------------------------------------
+\subsection{存在问题与困难}
 \lipsum[4-5]
 
-\section{如期完成全部论文工作的可能性}*
+% * -------------------------------------------------------------------------
+% * 解决方案
+% * -------------------------------------------------------------------------
+\subsection{解决方案}
+为了 XXXXXXX。具体来说，有以下解决方案：
+\begin{semiQuotList}
+    \item 解决方法 1。
+    \item 解决方法 2。
+    \item 解决方法 3。
+    \item 解决方法 4。
+    \item 解决方法 5。
+\end{semiQuotList}
 
-\subsection{subsection title}
-\lipsum[2-3]
-\subsection{subsection title}
-\lipsum[4-5]
+% * =========================================================================
+% * 如期完成全部论文工作的可能性
+% * =========================================================================
+\section{如期完成全部论文工作的可能性}
 
-\clearpage
-\section*{指导教师意见：}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.5\textwidth]{快逃.jpg}
-\end{figure}
-
-\vspace{24bp}
-\hfill 指导教师签名：\hspace{8\ccwd}
-
-\vspace{24bp}
-\hfill 年\hspace{2\ccwd}月\hspace{2\ccwd}日
-
-\vspace{24bp}
-\section*{检查小组意见：}
-
-\vspace{80bp}
-\hfill 组长（签字）：\hspace{8\ccwd}
-
-\vspace{24bp}
-\hfill 年\hspace{2\ccwd}月\hspace{2\ccwd}日
+本课题目前基本 XXXXXX，已经完成了  XXXXXX 构建。
+目前正在进行 XXXXXXX，将要进行 XXXXX。
+综上所述，论文能够按期完成，并取得一定的研究成果。
